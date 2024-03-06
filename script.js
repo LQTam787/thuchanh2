@@ -175,6 +175,12 @@ document.getElementById('surveyForm').addEventListener('submit', function (event
     displayResult();
 });
 
+// Hàm xử lý khi nhấn nút 'Submit'
+function submitForm() {
+    // Gọi hàm để hiển thị kết quả
+    displayResult();
+}
+
 // Hàm để hiển thị kết quả bài làm
 function displayResult() {
     const form = document.getElementById('surveyForm');
