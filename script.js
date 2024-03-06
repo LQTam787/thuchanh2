@@ -1,45 +1,3 @@
-// Thêm sự kiện cho form
-document.getElementById('surveyForm').addEventListener('submit', function (event) {
-    event.preventDefault(); // Ngăn chặn form gửi dữ liệu đi
-
-    // Gọi hàm để hiển thị kết quả
-    displayResult();
-});
-
-// Hàm để hiển thị kết quả bài làm
-function displayResult() {
-    const form = document.getElementById('surveyForm');
-    const resultContainer = document.getElementById('resultContainer');
-
-    // Xóa nội dung kết quả trước đó (nếu có)
-    resultContainer.innerHTML = '';
-
-    // Lặp qua từng câu hỏi và hiển thị kết quả
-    for (let i = 0; i < trueFalseQuestions.length + singleChoiceQuestions.length + multipleChoiceQuestions.length + openEndedQuestions.length; i++) {
-        const answerElement = document.createElement('p');
-        answerElement.textContent = `Câu hỏi ${i + 1}: ${getAnswer(i)}`;
-        resultContainer.appendChild(answerElement);
-    }
-
-    // Hiển thị kết quả container
-    resultContainer.style.display = 'block';
-}
-
-// Hàm để lấy câu trả lời của người dùng
-function getAnswer(index) {
-    const inputElements = document.getElementsByName(`answer_${index}`);
-    const selectedAnswers = [];
-
-    inputElements.forEach((inputElement) => {
-        if (inputElement.type === 'checkbox' || (inputElement.type === 'radio' && inputElement.checked)) {
-            selectedAnswers.push(inputElement.value);
-        }
-    });
-
-    return selectedAnswers.length > 0 ? selectedAnswers.join(', ') : 'Không có câu trả lời';
-}
-
-
 // Dữ liệu câu hỏi đúng/sai
 const trueFalseQuestions = [
     { question: "JavaScript là một ngôn ngữ lập trình phía client.", answer: true },
@@ -208,3 +166,44 @@ function createOptionsContainer(options, index) {
 
 // Gọi hàm để hiển thị câu hỏi khi trang web được load
 window.onload = displayQuestions;
+
+// Thêm sự kiện cho form
+document.getElementById('surveyForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Ngăn chặn form gửi dữ liệu đi
+
+    // Gọi hàm để hiển thị kết quả
+    displayResult();
+});
+
+// Hàm để hiển thị kết quả bài làm
+function displayResult() {
+    const form = document.getElementById('surveyForm');
+    const resultContainer = document.getElementById('resultContainer');
+
+    // Xóa nội dung kết quả trước đó (nếu có)
+    resultContainer.innerHTML = '';
+
+    // Lặp qua từng câu hỏi và hiển thị kết quả
+    for (let i = 0; i < trueFalseQuestions.length + singleChoiceQuestions.length + multipleChoiceQuestions.length + openEndedQuestions.length; i++) {
+        const answerElement = document.createElement('p');
+        answerElement.textContent = `Câu hỏi ${i + 1}: ${getAnswer(i)}`;
+        resultContainer.appendChild(answerElement);
+    }
+
+    // Hiển thị kết quả container
+    resultContainer.style.display = 'block';
+}
+
+// Hàm để lấy câu trả lời của người dùng
+function getAnswer(index) {
+    const inputElements = document.getElementsByName(`answer_${index}`);
+    const selectedAnswers = [];
+
+    inputElements.forEach((inputElement) => {
+        if (inputElement.type === 'checkbox' || (inputElement.type === 'radio' && inputElement.checked)) {
+            selectedAnswers.push(inputElement.value);
+        }
+    });
+
+    return selectedAnswers.length > 0 ? selectedAnswers.join(', ') : 'Không có câu trả lời';
+}
