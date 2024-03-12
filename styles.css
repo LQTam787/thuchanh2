@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f0f0f0;
     margin: 0;
     display: flex;
@@ -13,6 +13,7 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 form {
@@ -21,8 +22,13 @@ form {
     align-items: center;
 }
 
+h2 {
+    color: #3498db;
+}
+
 label {
     margin-top: 10px;
+    color: #333;
 }
 
 input {
@@ -30,6 +36,8 @@ input {
     padding: 8px;
     width: 100%;
     box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 button {
@@ -43,4 +51,17 @@ button {
 
 button:hover {
     background-color: #2980b9;
+}
+
+/* Add PTIT color */
+.container {
+    border: 2px solid #3498db;
+}
+
+button, input {
+    outline: none;
+}
+
+button:active {
+    background-color: #1f618d;
 }
