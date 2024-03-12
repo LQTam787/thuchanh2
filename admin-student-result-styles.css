@@ -1,0 +1,14 @@
+/* Student result content styling */
+#student-result-content {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/* Search and result list styling */
+.search-section {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}

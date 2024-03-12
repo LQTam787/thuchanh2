@@ -1,0 +1,16 @@
+/* Exam content styling */
+#exam-content {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/* Question styling */
+.question {
+    margin-bottom: 15px;
+}
+
+/* Timer styling */
+.timer {
+    font-size: 18px;
+    color: #ff4500;
+}

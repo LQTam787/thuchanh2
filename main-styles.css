@@ -1,0 +1,21 @@
+/* Header styling */
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Exam list styling */
+#exam-list {
+    margin: 20px;
+}
+
+/* Individual exam styling */
+.exam {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}

@@ -3,40 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Admin Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Hệ Thống Thi Trắc Nghiệm</title>
 </head>
 <body>
-    <div class="container">
-        <form id="loginForm">
-            <h2>Login</h2>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
+    <!-- Thay đổi đường dẫn để điều hướng đến trang mong muốn -->
+    <a href="login.html">Đăng nhập</a>
+    <a href="main.html">Trang Chính</a>
+    <a href="exam.html">Trang Bài Thi</a>
+    <a href="result.html">Trang Kết Quả</a>
+    <a href="admin-login.html">Trang Đăng nhập Admin</a>
+    <a href="admin-dashboard.html">Dashboard Admin</a>
+    <a href="admin-exam-edit.html">Trang Tạo/Chỉnh sửa Kỳ thi</a>
+    <a href="admin-stats.html">Trang Thống kê</a>
+    <a href="admin-student-result.html">Trang Xem Kết quả của Từng Sinh Viên</a>
 
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-
-            <button type="button" onclick="validateLogin()">Login</button>
-        </form>
-
-        <form id="registerForm">
-            <h2>Register</h2>
-            <label for="displayName">Display Name:</label>
-            <input type="text" id="displayName" name="displayName" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="regPassword">Password:</label>
-            <input type="password" id="regPassword" name="regPassword" required>
-
-            <label for="confirmPassword">Confirm Password:</label>
-            <input type="password" id="confirmPassword" name="confirmPassword" required>
-
-            <button type="button" onclick="validateRegistration()">Register</button>
-        </form>
-    </div>
-
+    <!-- Thay đổi đường dẫn để điều hướng đến trang mong muốn -->
     <script src="script.js"></script>
 </body>
 </html>

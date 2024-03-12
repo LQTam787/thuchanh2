@@ -1,0 +1,17 @@
+/* Stats content styling */
+#stats-content {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/* Stats table styling */
+.stats-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Chart styling */
+.chart {
+    margin-top: 20px;
+}
